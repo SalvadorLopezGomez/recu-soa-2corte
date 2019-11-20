@@ -1,0 +1,25 @@
+
+<section id="autenticationtwostep" class="mb-5 mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+              <div class="card_login">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <form #formAuthTwoStep="ngForm" (ngSubmit)="onAuthtwoStepValidate(formAuthTwoStep)">
+                      <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Codigo de Autenticación</h1>
+                      <div class="alert alert-danger" role="alert" *ngIf="isError">
+                        Something is wrong!
+                      </div>
+                      <div class="form-group">
+                        <input id="codigo" type="code" name="codigo" class="form-control" placeholder="codigo" [(ngModel)]="codigo" required>
+                      </div>
+                      <button type="submit" class="btn btn-lg btn-primary btn-block">Validar</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

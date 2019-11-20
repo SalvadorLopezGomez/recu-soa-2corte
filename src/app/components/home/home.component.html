@@ -1,0 +1,42 @@
+
+<section id="homes" class="mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-8 col-sm-4 col-md-4" *ngFor="let data of perfil">
+              <div class="card_book">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="container-precio-idioma">
+                        Correo:
+                      <p class="badge badge-info">
+                        {{data.correo }}
+                      </p>
+                      <hr>
+                        Nombre:
+                      <p class="badge badge-info">
+                        {{data.nombre}} 
+                      </p>
+                      <hr>
+                        Telefono:
+                      <p class="badge badge-info">
+                        {{data.telefono}}
+                      </p>
+                      <hr>
+                      Auntenticacion en 2 pasos
+                        <button (click)="twostep()" class="btn btn-lg btn-primary btn-block" *ngIf="this.autenticationActive == false">
+                          Activar
+                        </button>
+                        <button class="btn btn-lg btn-primary btn-block" *ngIf="this.autenticationActive == true">
+                          Activado
+                        </button>
+                      <hr>
+                      Cambiar contraseña
+                      <a routerLink="/user/resetpassword"><button class="btn btn-lg btn-primary btn-block">Cambiar</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
